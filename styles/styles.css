@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/ptsans-400.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/ptsans-700.woff2) format("woff2");
+    font-display: swap;
+}
+
+body{
+    font-family: "PT Sans",sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    background-color: #f2f2f2;
+}
+
+.page-header{
+    background-color: #ffffff;
+    color:#000000;
+}
+
+.navigation-link{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+.first-screen-images{
+    background-image:url(/images/index-background.jpg);
+    background-repeat:no-repeat;
+}
+
+.first-screen-images img{
+    margin-top:51px;
+    margin-bottom:82px;
+    margin-left:411px;   
+    margin-right:411px;
+}
+
+.first-screen-title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.first-screen-description{
+    font-weight: 400;
+    font-size:22px;
+    line-height:36px;
+    text-align:center;
+}
+
+
+
+.advantage-item:nth-child(-n+2){
+    background-color:#83B3D3;
+    color:#FFFFFF;
+}
+
