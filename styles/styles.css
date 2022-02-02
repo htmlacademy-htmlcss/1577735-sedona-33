@@ -46,7 +46,7 @@ body{
 }
 
 .first-screen-images{
-    background-image:url(/images/index-background.jpg);
+    background-image:url(../images/index-background.jpg);
     background-repeat:no-repeat;
 }
 
