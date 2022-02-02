@@ -38,6 +38,13 @@ body{
     text-decoration: none;
 }
 
+.counter{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #000000;/*цвет должен быть #ffffff*/
+}
+
 .first-screen-images{
     background-image:url(/images/index-background.jpg);
     background-repeat:no-repeat;
@@ -46,8 +53,8 @@ body{
 .first-screen-images img{
     margin-top:51px;
     margin-bottom:82px;
-    margin-left:411px;   
-    margin-right:411px;
+    margin-left:371px;   
+    margin-right:371px;
 }
 
 .first-screen-title{
@@ -112,6 +119,10 @@ body{
 .advantage-item:nth-child(-n+2){
     background-color:#83B3D3;
     color:#FFFFFF;
+}
+
+.only-here{
+    background-color: #ffffff;
 }
 
 .only-here-item:nth-of-type(odd){
@@ -275,4 +286,24 @@ body{
     font-size: 18px;
     line-height: 23px;    
     color: #333333;
+}
+
+.distribution__catalog{
+    background-color: #ffffff;
+}
+
+.distribition-title__catalog{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;    
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+.distribution-description__catalog{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;    
+    text-align: center;   
+    color: #000000;
 }
