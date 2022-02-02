@@ -46,7 +46,7 @@ body{
 }
 
 .first-screen-images{
-    background-image:url(../images/index-background.jpg);
+    background-image:url(images/index-background.jpg);
     background-repeat:no-repeat;
 }
 
@@ -155,7 +155,7 @@ body{
 }
 
 .distribution{
-    background-image: url(/images/background-distribution.jpg);
+    background-image: url(images/background-distribution.jpg);
     background-repeat:no-repeat;
 }
 
@@ -195,7 +195,7 @@ body{
 }
 
 .inner-header{
-    background-image: url(/images/catalog-background\ 1.jpg);
+    background-image: url(images/catalog-background\ 1.jpg);
     background-repeat: no-repeat;
     color: #000000;/*цвет должен быть #ffffff*/
 }
