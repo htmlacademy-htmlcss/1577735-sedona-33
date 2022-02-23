@@ -621,9 +621,10 @@ body {
 }
 
 .hotel-card {
-  width: 340px;
+  width: 300px;
   padding: 20px;
   display: grid;
+
   row-gap: 16px;
   grid-template-columns: 133px 26px 141px;
 }
