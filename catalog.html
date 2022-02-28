@@ -56,6 +56,9 @@
                                 <img src="images/home 1.svg" width="12" height="12" alt="Главная">
                             </a>
                         </li>
+                        <li class="breadcrumbs-item breadcrumbs-pointer">
+                            <img src="images/nav-link 1.svg" width="5" height="8" alt="Стрелка">
+                        </li>
                         <li class="breadcrumbs-item">
                             <a class="breadcrumbs-link">Каталог</a>
                         </li>
@@ -118,11 +121,18 @@
                                     <label class="cost-label">до
                                         <input class="cost-input" type="number" min="0" max="12000" value="9000">
                                     </label>
-                                </p>
-                                <input class="range-slider-input" type="range" min="0" max="12000" value="0" step="100"
-                                    aria-label="Ползунок минимальной цены">
-                                <input class="range-slider-input" type="range" min="0" max="12000" value="9000" step="100"
-                                    aria-label="Ползунок максимальной цены">
+                                
+                                    <div class="range-scale">
+                                        <div class="range-bar" style="width:227px" >
+                                            <button class="range-toggle toggle-min">
+                                                <span class="visually-hidden">Изменить минимальную цену.</span>
+                                            </button>
+                                            <button class="range-toggle toggle-max">
+                                                <span class="visually-hidden">Изменить максимальную цену.</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </p>    
                             </fieldset>
                             <div class="search-hotels__buttons">
                                 <button class="button button-blue" type="submit">Применить</button>
