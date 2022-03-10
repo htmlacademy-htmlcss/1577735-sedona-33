@@ -24,24 +24,24 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-user-link" href="#">
-              <img src="images/search.svg" width="18" height="18" alt="Поиск">
-              <span class="visually-hidden">                
-                Поиск
-              </span>
+            <a class="navigation-link-icon" href="#">
+              <svg class="navigation-icon" width="20" height="19" aria-labelledby="search-title" role="img" focusable="false">
+                <title id="search-title">Поиск</title>
+                <use href="sprite.svg#magnifying-glass"></use>
+              </svg>              
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-user-link" href="#">
-              <img src="images/favorite.svg" width="18" height="18" alt="Избранное">
-              <span class="visually-hidden">
-                Выбрано гостиниц:
-              </span>
+            <a class="navigation-link-icon" href="#">
+              <svg class="navigation-icon" width="19" height="17" aria-labelledby="fav-title" role="img" focusable="false">
+                <title id="fav-title">Избранное</title>
+                <use href="sprite.svg#heart"></use>
+              </svg>              
               <sup class="counter">12</sup>    
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-user-link button" href="#">Хочу сюда!</a>
+            <a class="navigation-link button" href="#">Хочу сюда!</a>
           </li>          
         </ul>
         
@@ -66,10 +66,7 @@
                   <h3 class="advantage-title">Настоящий</br> городок</h3>
                   <p class="advantage-description">Седона — не аттракцион</br> для туристов, там течёт</br> своя жизнь</p>
                 </figcaption>
-              </figure>
-              
-              
-            
+              </figure>           
               <img src="images/photo-1.jpg" width="800" height="384" alt="Улица города">
               <ul class="only-here">
                 <li class="only-here-item">
@@ -96,22 +93,18 @@
                   <p class="advantage-description">Да, по нему можно пройти!</br> Если вы осмелитесь,</br> разумеется</p>
                 </figcaption>
               </figure>
-
               <img src="images/photo-2.jpg" width="800" height="384" alt="Вид на Мост Дьявола">
-            
-            
-              
             </li>
             <li class="advantage-item">
-              <h3 class="advantage-title">Небольшая площадь</h3>
+              <h3 class="advantage-title">Небольшая</br> площадь</h3>
               <p class="advantage-description">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantage-item">
-              <h3 class="advantage-title">Красивая дорога</h3>
+              <h3 class="advantage-title">Красивая</br> дорога</h3>
               <p class="advantage-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantage-item">
-              <h3 class="advantage-title">Мало туристов</h3>
+              <h3 class="advantage-title">Мало</br> туристов</h3>
               <p class="advantage-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ol>
@@ -138,17 +131,26 @@
           <ul class="socials-list">
             <li class="socials-item">
               <a class="social-link" href="https://twitter.com/htmlacademy_ru">
-                <img src="images/social-twitter.svg" width="18" height="15" alt="Twitter">              
+                <svg class="social-icon" width="18" height="15" aria-labelledby="twitter" role="img" focusable="false">
+                  <title id="twitter">Twitter</title>
+                  <use href="sprite.svg#twitter"></use>
+                </svg>              
               </a>
             </li>
             <li class="socials-item">            
               <a class="social-link" href="https://www.facebook.com/htmlacademy">
-                <img src="images/social-facebook.svg" width="10" height="18" alt="Facebook">              
+                <svg class="social-icon" width="10" height="18" aria-labelledby="facebook" role="img" focusable="false">
+                  <title id="facebook">Facebook</title>
+                  <use href="sprite.svg#facebook"></use>
+                </svg>
               </a>
             </li>
             <li class="socials-item">
               <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
-                <img src="images/social-youtube.svg" width="20" height="16" alt="Youtube">              
+                <svg class="social-icon" width="20" height="16" aria-labelledby="youtube" role="img" focusable="false">
+                  <title id="youtube">Youtube</title>
+                  <use href="sprite.svg#youtube"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -160,10 +162,16 @@
         <section class="site">
           <h2 class="visually-hidden">Сайт</h2>
           <a class="site-link" href="https://htmlacademy.ru/">
-            <img src="images/html-academy.svg" width="115" height="34" alt="HTML Academy">
+            <svg class="academy" width="115" height="34" aria-labelledby="html-academy" role="img" focusable="false">
+              <title id="html-academy">HTML Academy</title>
+              <use href="sprite.svg#site"></use>
+            </svg>
           </a>
         </section>
       </div>
     </footer>
+    <div class="modal-container">
+      
+    </div>
   </body>
 </html>
