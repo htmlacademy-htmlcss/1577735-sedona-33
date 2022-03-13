@@ -638,7 +638,7 @@ body {
   position: absolute;
   top: -2px;
   right: -17px;
-  content: url(/images/nav-link.svg);
+  content: url(images/nav-link.svg);
 }
 
 .breadcrumbs-item:last-child::after {
@@ -714,7 +714,7 @@ body {
 }
 
 .control-item[type="checkbox"]:checked + .control-mark {
-  background-image: url(/images/tick.svg);
+  background-image: url(images/tick.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -728,7 +728,7 @@ body {
 }
 
 .control-item[type="radio"]:checked + .control-mark {
-  background-image: url(/images/Ellipse.svg);
+  background-image: url(images/Ellipse.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -869,7 +869,7 @@ body {
   border: 2px solid #e6e6e6;
   box-sizing: border-box;
   border-radius: 4px;
-  background-image: url(/images/arrow-down.svg);
+  background-image: url(images/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
@@ -1133,7 +1133,7 @@ body {
   border: 2px solid #e6e6e6;
   box-sizing: border-box;
   border-radius: 4px;
-  background-image: url(/images/arrow-down.svg);
+  background-image: url(images/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
