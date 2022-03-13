@@ -822,6 +822,7 @@ body {
 .search-hotels__buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin-left: auto;
 }
@@ -1226,10 +1227,35 @@ input {
   text-align: center;
 }
 
-.button.button-blue,
-.reset {
+.button.button-blue {
   width: 160px;
   height: 48px;
+}
+
+.button.button-blue:focus {
+  background: #68a2ca;
+  outline: 3px solid #ffffff;
+  border-radius: 4px;
+}
+
+.reset {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.reset:hover {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.reset:focus {
+  outline: 3px solid #83b3d3;
+
+  border-radius: 4px;
+}
+
+.reset:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .distribution-button {
