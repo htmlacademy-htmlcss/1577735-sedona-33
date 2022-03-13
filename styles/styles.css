@@ -623,20 +623,26 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
   margin-top: 5px;
   margin-left: 73px;
 }
 
 .breadcrumbs-item {
-  display: inline;
-}
-
-.breadcrumbs-pointer {
-  margin: 0 10px;
-}
-
-.breadcrumbs-link {
   text-decoration: none;
+  margin-right: 26px;
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  top: -2px;
+  right: -17px;
+  content: url(/images/nav-link.svg);
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .catalog-filter {
@@ -708,7 +714,7 @@ body {
 }
 
 .control-item[type="checkbox"]:checked + .control-mark {
-  background-image: url(/images/tick\ 2.svg);
+  background-image: url(/images/tick.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -722,7 +728,7 @@ body {
 }
 
 .control-item[type="radio"]:checked + .control-mark {
-  background-image: url(/images/Ellipse\ 4.svg);
+  background-image: url(/images/Ellipse.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
