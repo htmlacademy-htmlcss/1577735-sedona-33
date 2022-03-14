@@ -623,20 +623,26 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
   margin-top: 5px;
   margin-left: 73px;
 }
 
 .breadcrumbs-item {
-  display: inline;
-}
-
-.breadcrumbs-pointer {
-  margin: 0 10px;
-}
-
-.breadcrumbs-link {
   text-decoration: none;
+  margin-right: 26px;
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  top: -2px;
+  right: -17px;
+  content: url(../images/nav-link.svg);
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .catalog-filter {
@@ -694,26 +700,26 @@ body {
   border-radius: 4px;
 }
 
-.control:hover .control-mark {
+.control:hover .control-item[type="checkbox"] + .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
 .control-item:disabled + .control-mark {
   border-color: #242424;
 }
-.control:focus {
+
+.control-item[type="checkbox"]:focus + .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid #83b3d3;
-  box-sizing: border-box;
 }
 
 .control-item[type="checkbox"]:checked + .control-mark {
-  background-image: url(/images/tick\ 2.svg);
+  background-image: url(../images/tick.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.control-item[type="checkbox"]:active {
+.control-item[type="checkbox"]:active + .control-mark {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -722,9 +728,13 @@ body {
 }
 
 .control-item[type="radio"]:checked + .control-mark {
-  background-image: url(/images/Ellipse\ 4.svg);
+  background-image: url(../images/Ellipse.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.control-item[type="radio"]:focus + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
 .control-label {
@@ -812,6 +822,7 @@ body {
 .search-hotels__buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin-left: auto;
 }
@@ -858,17 +869,13 @@ body {
   border: 2px solid #e6e6e6;
   box-sizing: border-box;
   border-radius: 4px;
-  background-image: url(/images/arrow-down.svg);
+  background-image: url(../images/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
 }
 
 .select-control:hover,
-.select-control:focus {
-  border-color: #83b3d3;
-}
-
 .select-control:focus {
   outline: 2px solid #83b3d3;
 }
@@ -888,13 +895,7 @@ body {
 
 .button-display-mode:hover,
 .button-display-mode:focus {
-  border-color: #83b3d3;
-}
-
-.button-display-mode:active,
-.button-display-mode:focus {
-  border: 2px solid #000000;
-  box-sizing: border-box;
+  outline: 2px solid #83b3d3;
   border-radius: 4px;
 }
 
@@ -931,6 +932,7 @@ body {
 
   row-gap: 16px;
   grid-template-columns: 133px 26px 141px;
+  grid-template-rows: 206px 31px 23px 39px 37px;
 }
 
 .hotel-card-link {
@@ -939,13 +941,30 @@ body {
   grid-column: 1/-1;
 }
 
+.hotel-card-image {
+  display: block;
+}
+
+.hotel-card-image:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-link:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.hotel-card-image:active {
+  opacity: 0.3;
+}
+
 .hotel-card-title {
   margin: 0;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
   color: #000000;
-  grid-column: 2/-2;
+  grid-column: 1/-1;
 }
 
 .housing-group,
@@ -978,7 +997,19 @@ body {
   text-decoration: none;
   color: #ffffff;
   margin: 0;
-  padding: 10px;
+  padding: 9px 0;
+}
+
+.favorites:hover:not(.selected) {
+  padding: 1px;
+  background: #68a2ca;
+  border: 1px solid #756257;
+  border-radius: 4px;
+}
+
+.favorites:active,
+.button-blue:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .rating {
@@ -988,7 +1019,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding: 10px 0;
+  padding: 9px 0;
   color: #333333;
   background: #f2f2f2;
   border-radius: 4px;
@@ -1026,6 +1057,7 @@ body {
 .pagination-block {
   width: 1056px;
   margin: 0 auto;
+  padding: 3px 0 3px;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -1038,33 +1070,46 @@ body {
   list-style-type: none;
 }
 
-.pagination-item {
-  width: 55px;
-  height: 55px;
-  color: #ffffff;
-  background-color: #83b3d3;
-  display: flex;
-  place-content: center;
-  place-items: center;
-}
-
 .pagination-item:not(:last-child) {
   margin-right: 8px;
 }
 
 .pagination-link {
+  width: 55px;
+  height: 55px;
+  color: #ffffff;
+  background-color: #83b3d3;
+  border-radius: 4px;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  margin: 0;
-  padding: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  background-color: #83b3d3;
+.pagination-link:hover {
+  background-color: #68a2ca;
+  border-radius: 4px;
+}
+
+.pagination-link:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+  border-radius: 4px;
+}
+
+.pagination-link:active {
+  background-color: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
   background-color: #f2f2f2;
   color: #000000;
+  border-radius: 4px;
 }
 
 .on-page,
@@ -1079,6 +1124,28 @@ body {
   width: 160px;
   height: 48px;
   padding: 0 20px;
+}
+
+.show-on-page {
+  margin-left: 51px;
+  padding: 12px 17px;
+  padding-right: 40px;
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-image: url(../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+
+.show-on-page:hover,
+.show-on-page:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.show-on-page:active {
+  opacity: 0.3;
 }
 
 .button {
@@ -1130,6 +1197,16 @@ body {
   border-radius: 4px;
 }
 
+.selected:hover {
+  background-color: #6c9e42;
+  border-radius: 4px;
+}
+
+.selected:focus {
+  background-color: #6c9e42;
+  outline: 3px solid #756257;
+}
+
 button {
   border: none;
   font-family: inherit;
@@ -1150,10 +1227,35 @@ input {
   text-align: center;
 }
 
-.button.button-blue,
-.reset {
+.button.button-blue {
   width: 160px;
   height: 48px;
+}
+
+.button.button-blue:focus {
+  background: #68a2ca;
+  outline: 3px solid #ffffff;
+  border-radius: 4px;
+}
+
+.reset {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.reset:hover {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.reset:focus {
+  outline: 3px solid #83b3d3;
+
+  border-radius: 4px;
+}
+
+.reset:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .distribution-button {
