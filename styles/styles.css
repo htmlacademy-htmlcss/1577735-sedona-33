@@ -1339,10 +1339,21 @@ input {
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close:active {
+  opacity: 0.3;
 }
 
 .modal-title {
@@ -1395,6 +1406,22 @@ input {
   margin-left: auto;
   padding: 5px 35px 5px 20px;
   border: none;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  background-image: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
+
+.date[type="text"]:hover {
+  background-color: #e6e6e6;
+  border-radius: 4px;
+}
+
+.date[type="text"]:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
 }
 
 .people {
@@ -1439,22 +1466,65 @@ input {
   margin-left: 56px;
 }
 
-.kids + .form-wraper {
-  margin-left: 43px;
-}
-
 .field-group-litle {
   margin: 0;
   display: flex;
 }
 
 .quantity {
-  width: 133px;
-  padding: 5px 33px;
+  width: 69px;
+
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
 }
 
 .quantity::-webkit-outer-spin-button,
 .quantity::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+button.minus,
+button.plus {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.form-wraper {
+  width: 133px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+}
+
+.minus {
+  background-image: url(../images/minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.plus {
+  background-image: url(../images/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.modal-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0;
+  width: 575px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
 }
