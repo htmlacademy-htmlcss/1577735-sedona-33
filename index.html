@@ -195,24 +195,34 @@
             </p>      
             <div class="litle-form">     
               <p class="field-group-litle">
-                <label class="people adults">Взрослые:
+                <label class="people adults">Взрослые:</label>    
                 <div class="form-wraper">
                   <button class="minus" type="button"></button>
                   <input class="quantity" type="number" name="adults" value="2">
-                  <button class="plus" type="button"></button>
-                
-                </div>  
-                </label>            
+                  <button class="plus" type="button"></button>                
+                </div>                         
               </p>
               <p class="field-group-litle">
-                <label class="people kids">Дети:
+                <span class="kids kids-icon">
+                  <label class="people kids">Дети:
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                      <svg class="tooltip-icon" width="1" height="9" role="img" focusable="false">
+                        <use href="sprite.svg#tooltip-icon"></use>
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label"> 
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </span>
+                  </span>
+                  </label>
+                </span>
                 <div class="form-wraper">
                   <button class="minus" type="button"></button>
                   <input class="quantity" type="number" name="kids" value="1">
-                  <button class="plus" type="button"></button>
-                 
+                  <button class="plus" type="button"></button>                 
                 </div>
-                 </label>             
+                              
               </p>
             </div> 
           </form>

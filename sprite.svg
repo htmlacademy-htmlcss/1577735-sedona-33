@@ -20,4 +20,7 @@
     <symbol id="star" viewBox="0 0 18 18">
         <path d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z" fill="#83B3D3"/>
     </symbol>
+    <symbol id="tooltip-icon" viewBox="0 0 1 9">
+        <g clip-path="url(#a)" fill="#fff"><path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h1v9H0z"/></clipPath></defs>
+    </symbol>
 </svg>
