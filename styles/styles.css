@@ -1136,7 +1136,7 @@ body {
   margin-top: 30px;
 }
 
-.catalog-load-more.button-blue {
+.catalog-load-more.button-blue.button {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -1254,6 +1254,7 @@ body {
   display: inline-block;
   background-color: #756257;
   border-radius: 4px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -1310,14 +1311,7 @@ body {
   outline: 3px solid #756257;
 }
 
-button {
-  border: none;
-  font-family: inherit;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-input {
+.input {
   font-family: inherit;
   font-size: inherit;
 }
