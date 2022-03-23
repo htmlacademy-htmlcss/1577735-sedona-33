@@ -43,10 +43,15 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.visually-hidden {
-  visibility: hidden;
+.visually-hidden { 
   position: absolute;
-  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border:0;
+  padding:0;
+  clip:rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page-header {
@@ -76,7 +81,6 @@ body {
   position: relative;
   display: flex;
   width: 1060px;
-
   margin: 0 auto -9px;
 }
 
@@ -153,7 +157,7 @@ body {
 
 .navigation-link-current {
   text-decoration: underline 2px solid #756257;
-  text-underline-offset: 20px;
+  text-underline-offset: 23px;
 }
 
 .counter {
@@ -650,21 +654,16 @@ body {
 
 .breadcrumbs-item {
   display: flex;
-
   min-width: 28px;
   place-items: center;
   place-content: center;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
   position: relative;
   margin-right: 10px;
 }
 
 .breadcrumbs-item::after {
   position: absolute;
-  top: -5px;
+  top: -2px;
   right: -8px;
   content: url("../images/nav-link.svg");
 }
@@ -677,17 +676,20 @@ body {
   opacity: 0.6;
 }
 
+.breadcrumbs-link{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  box-sizing: content-box;
+  padding: 0 5px;
+}
+
 .breadcrumbs-link:focus {
   outline: 3px solid #83b3d3;
   padding: 0 5px;
   border-radius: 4px;
-}
-
-.breadcrumbs-item:not(:first-child) {
-  display: flex;
-  place-content: center;
-  min-width: 28px;
-  margin: 0 8px;
 }
 
 .catalog-filter {
@@ -750,15 +752,6 @@ body {
   border-radius: 4px;
 }
 
-.control:hover .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.control:focus-within .control-mark {
-  background-color: rgba(255, 255, 255, 0.6);
-  outline: 3px solid #83b3d3;
-}
-
 .control-item[type="radio"] + .control-mark {
   border-radius: 50%;
 }
@@ -769,8 +762,18 @@ body {
   background-position: center;
 }
 
+.control-item[type="checkbox"]:hover + .control-mark{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-item[type="checkbox"]:focus + .control-mark{
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
 .control-item[type="checkbox"]:active + .control-mark {
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .control-item[type="radio"]:checked + .control-mark {
@@ -779,8 +782,12 @@ body {
   background-position: center;
 }
 
-.control:focus-within .control-item[type="radio"] + .control-mark {
-  outline: 3px solid #83b3d3;
+.control-item[type="radio"]:focus + .control-mark{
+  outline: 3px solid #83B3D3;
+}
+
+.control-item[type="radio"]:active + .control-mark{
+background-color: #ffffff;
 }
 
 .control-label {
@@ -869,7 +876,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.range-toggle {
+.range-toggle.button {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -1316,8 +1323,9 @@ body {
   font-size: inherit;
 }
 
-.reset {
+.reset.button {
   background-color: transparent;
+  text-transform: none;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -1326,11 +1334,11 @@ body {
   width: 100px;
 }
 
-.button.button-blue {
+.filter {
   width: 160px;
 }
 
-.button.button-blue:focus {
+.filter:focus {
   background: #68a2ca;
   outline: 3px solid #ffffff;
   border-radius: 4px;
