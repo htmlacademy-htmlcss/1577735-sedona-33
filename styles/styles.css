@@ -185,6 +185,10 @@ body {
   border-radius: 50%;
 }
 
+.navigation-icon:active + .counter {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .main-container {
   flex-grow: 1;
   counter-reset: feature;
