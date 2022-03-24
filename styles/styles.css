@@ -710,6 +710,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: 40px;
   margin-bottom: 82px;
   margin-left: 68px;
@@ -717,16 +718,17 @@ body {
 }
 
 .catalog-filter-group {
+  margin: 0;
   padding: 0;
   border-style: none;
 }
 
 .catalog-filter-group:first-child {
-  margin-right: 61px;
+  margin-right: 65px;
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 165px;
+  margin-right: 168px;
 }
 
 .catalog-filter-title {
@@ -737,6 +739,7 @@ body {
 }
 
 .cost-table {
+  margin-left: -2px;
   padding-bottom: 35px;
 }
 
@@ -886,30 +889,33 @@ body {
 .range-bar {
   position: absolute;
   height: 4px;
-
   background-color: rgb(255, 255, 255);
 }
 
-.range-toggle.button {
+.button.range-toggle {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.range-toggle:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+.button.range-toggle:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 
-.range-toggle:focus {
+.button.range-toggle:focus {
+  background-color: #ffffff;
   outline: 3px solid #83b3d3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
 }
 
-.range-toggle:active {
+.button.range-toggle:active {
+  background-color: #ffffff;
   outline: 2px solid #83b3d3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
@@ -1256,7 +1262,6 @@ body {
   appearance: none;
   background-color: #ffffff;
   position: relative;
-  top: 0px;
 }
 
 .show-on-page:hover,
@@ -1412,16 +1417,17 @@ body {
 
 .modal-close-button {
   position: absolute;
-  top: 53px;
-  right: 70px;
+  top: 55px;
+  right: 71px;
   width: 53px;
   height: 53px;
   padding: 0;
   background-color: #f2f2f2;
   border: none;
   border-radius: 50%;
-
   cursor: pointer;
+  display: grid;
+  place-content: center;
 }
 
 .modal-close-button:hover {
@@ -1578,7 +1584,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 18px 22px;
   align-items: center;
   color: #ffffff;
   position: absolute;
@@ -1663,16 +1669,6 @@ body {
   opacity: 0.3;
 }
 
-.minus {
-  position: relative;
-  left: 13px;
-}
-
-.plus {
-  position: relative;
-  right: 13px;
-}
-
 .minus.button:hover,
 .plus.button:hover {
   background-color: transparent;
@@ -1698,6 +1694,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+  position: relative;
+  left: 13px;
 }
 
 .plus {
@@ -1705,6 +1703,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+  position: relative;
+  right: 13px;
 }
 
 .modal-button {
