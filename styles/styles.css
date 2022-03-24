@@ -1572,7 +1572,8 @@ body {
   background-color: #83b3d3;
   border-radius: 50%;
   position: relative;
-  top: 3px;
+  top: 12px;
+  left: 55px;
 }
 
 .tooltip-text {
